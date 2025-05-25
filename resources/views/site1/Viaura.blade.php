@@ -158,7 +158,7 @@
               <div class="card-body text-center ">
                 <h5 class="pt-3">Front End Program</h5>
                 <p>A brief description of the first project and its key features.</p>
-                <a href="Login-Signup.html" class="btn btn-success">Get Started</a>
+                <a href="{{ route('viaura.Login-Signup') }}" class="btn btn-success">Get Started</a>
               </div>
             </div>
           </div>

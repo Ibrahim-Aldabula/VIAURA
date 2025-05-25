@@ -22,6 +22,10 @@ class ViauraController extends Controller
         return view("site1.Login-Signup");
     }
 
+     public function profile(){
+        return view("site1.profile");
+    }
+
 
        public function LoginSignup_data(Request $request){
 

@@ -4,8 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ViauraController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view("site1.Viaura");
 });
+
 
 
       Route::prefix('viaura')->name('viaura.')->controller(ViauraController::class)
