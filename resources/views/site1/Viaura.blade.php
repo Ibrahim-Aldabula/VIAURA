@@ -168,7 +168,7 @@
               <div class="card-body text-center">
                 <h5 class="pt-3">back End Program</h5>
                 <p>A brief description of the first project and its key features.</p>
-                <a href="Login-Signup.html" class="btn btn-success">Get Started</a>
+                <a href="{{ route('viaura.viaura') }}" class="btn btn-success">Get Started</a>
               </div>
             </div>
           </div>
@@ -178,7 +178,7 @@
               <div class="card-body text-center">
                 <h5 class="pt-3">Artificial Intelligence</h5>
                 <p>A brief description of the first project and its key features.</p>
-                <a href="Login-Signup.html" class="btn btn-success">Get Started</a>
+                <a href="{{ route('viaura.viaura') }}" class="btn btn-success">Get Started</a>
               </div>
             </div>
           </div>
