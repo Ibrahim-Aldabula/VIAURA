@@ -28,8 +28,4 @@ Route::get('/', function () {
 
           Route::get('/contact', 'contact')->name('contact');
 
-          Route::get('/contact', 'contact')->name('contact');
-
-          Route::get('/contact', 'contact')->name('contact');
-
       });
