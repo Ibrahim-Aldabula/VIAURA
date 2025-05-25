@@ -7,7 +7,7 @@
     <title>Edit Profile</title>
     <link rel="stylesheet" href="{{ asset('Front/CSS/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('Front/CSS/bootstrap.min.css') }}">
-    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" /> --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link rel="website icon" href="{{ asset('Front/images/LOGO.svg') }}">
     <link rel="stylesheet" href="{{ asset('Front/CSS/edit-profile.css') }}">
 
@@ -40,8 +40,7 @@
                     </div>
                     <div class="col-md-5 jobtitle" data-aos="fade-right" data-aos-duration="700" data-aos-delay="400">
                         <label for="jobtitle" class="form-label  ms-3 f-18">Job Title</label>
-                        <input type="text" class="form-control" id="jobtitle" value="Full Stack Developer"
-                            name="jobtitle">
+                        <input type="text" class="form-control" id="jobtitle" value="Full Stack Developer" name="jobtitle">
                     </div>
                     <div class="col-md-8 biography" data-aos="fade-right" data-aos-duration="700" data-aos-delay="500">
                         <label for="biography" class="form-label  ms-3 f-18">Bio</label>
@@ -64,8 +63,7 @@ Whether I'm working on an e-commerce site, a dashboard, or a custom web app, Iâ€
                     </div>
                     <div class="col-md-8 address" data-aos="fade-right" data-aos-duration="700" data-aos-delay="200">
                         <label for="address" class="form-label  ms-3 f-18">Address</label>
-                        <input type="text" class="form-control" id="address" value="Maple Ave, Toronto, ON, Canada"
-                            name="address">
+                        <input type="text" class="form-control" id="address" value="Maple Ave, Toronto, ON, Canada" name="address">
                     </div>
                     <div class="col-md-8 links" data-aos="fade-right" data-aos-duration="700" data-aos-delay="300">
                         <label for="link" class="form-label  ms-3 f-18">Links</label> <button type="button"
@@ -147,7 +145,7 @@ Whether I'm working on an e-commerce site, a dashboard, or a custom web app, Iâ€
         </section>
     </main>
     <script src="{{ asset('Front/JS/bootstrap.bundle.min.js') }}"></script>
-    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="{{ asset('Front/JS/edit-profile.js') }}"></script>
 </body>
 

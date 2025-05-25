@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Setup</title>
-    <link rel="stylesheet" href="CSS/all.min.css">
-    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('Front/CSS/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('Front/CSS/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <link rel="website icon" href="images/LOGO.svg">
-    <link rel="stylesheet" href="CSS/ProfileSetup.css">
+    <link rel="website icon" href="{{ asset('Front/images/LOGO.svg') }}">
+    <link rel="stylesheet" href="{{ asset('Front/CSS/ProfileSetup.css') }}">
 
 </head>
 
@@ -61,7 +61,7 @@
                     <div class="col-lg-12 d-flex justify-content-end">
                         <button type="button" class="px-4 py-2 transition-all me-4 swap skip">Skip </i></button>
                         <button type="button" class="px-4 py-2 transition-all swap next">Next <i
-                                class="fa-solid fa-angle-right"></i></button>
+                            class="fa-solid fa-angle-right"></i></button>
                     </div>
                    </div>
                 </div>
@@ -100,7 +100,7 @@
                      <div class="row ">
                         <div class="col-lg-6">
                             <form id="profileImageForm">
-                                <img id="previewImage" src="images/default.png" alt="Profile Preview"
+                                <img id="previewImage" src="{{ asset('Front/images/default.png') }}" alt="Profile Preview"
                                     class="img-thumbnail mb-5">
                                 <label for="profileImage" class="form-label f-18 fw-bold mb-3 ms-3 d-block">Upload your
                                     photo</label>
@@ -125,9 +125,9 @@
         </section>
     </main>
 
-    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('Front/JS/bootstrap.bundle.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="JS/ProfileSetup.js"></script>
+    <script src="{{ asset('Front/JS/ProfileSetup.js') }}"></script>
 </body>
 
 </html>

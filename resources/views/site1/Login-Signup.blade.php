@@ -7,7 +7,7 @@
     <title>Login/Signup</title>
     <link rel="stylesheet" href="{{ asset('Front/CSS/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('Front/CSS/bootstrap.min.css') }}">
-    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" /> --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link rel="website icon" href="{{ asset('Front/images/LOGO.svg') }}">
     <link rel="stylesheet" href="{{ asset('Front/CSS/login-signup.css') }}">
 
@@ -57,8 +57,8 @@
                     <label for="remember" data-aos="fade-right" data-aos-delay="400">Remember me</label>
                     <a class="forget" href="{{ route('viaura.resetPassword') }}" data-aos="fade-left" data-aos-delay="400">Forgot password?</a>
 
-                    <button>Log In</button>
-                    {{-- <button type="submit" onclick="return false;" data-aos="fade-up" data-aos-delay="400">Log In</button> --}}
+                    {{-- <button>Log In</button> --}}
+                    <button type="submit" data-aos="fade-up" data-aos-delay="400">Log In</button>
                 </form>
             </div>
         </div>
@@ -99,8 +99,9 @@
                     <input type="checkbox" name="acceptTerms"  class="acceptTerms">
                     <label for="acceptTerms">I accept terms</label>
 
-                    <button>Sign up</button>
-                    {{-- <button type="submit" onclick="return false;">Sign up</button> --}}
+                    {{-- <button>Sign up</button> --}}
+                    <button type="submit" >Sign up</button>
+
                 </form>
             </div>
         </div>
@@ -135,7 +136,7 @@
 
 
     <script src="{{ (asset('Front/JS/bootstrap.bundle.min.js')) }}"></script>
-    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="{{ asset('Front/JS/login-signup.js') }}"></script>
 </body>
 
