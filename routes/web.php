@@ -7,12 +7,9 @@ Route::get('/', function () {
     return view("site1.Viaura");
 });
 
-
-
       Route::prefix('viaura')->name('viaura.')->controller(ViauraController::class)
          ->group(function(){
           Route::get('/', 'viaura')->name('viaura');
-        //   Route::post('/', 'viaura');
 
           Route::get('/edit-profile', 'EditProfile')->name('edit-profile');
 

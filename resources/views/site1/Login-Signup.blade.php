@@ -14,23 +14,6 @@
 </head>
 
 <body>
-
-
-
-    {{--   <div class="col-md-12">
-                    <div class="mb-3">
-                        <label for="cv">CV</label>
-                        <input type="file" name="cv" id="cv" class="form-control @error('cv')
-                            is-invalid
-                        @enderror">
-                        @error('cv')
-                             <span class="invalid-feedback">{{ $message }}</span>
-                        @enderror
-                   </div>
-                </div> --}}
-
-
-
     <div id="container" class="login-signup">
         <div class="login">
             <div class="content">
@@ -38,7 +21,7 @@
                 <form action="{{ route('viaura.Login-Signup') }}" method="post">
                     @csrf
 
-                    <input  type="email" name="email" id="email" required data-aos="fade-right" data-aos-delay="200" placeholder="email" value="" @error('email') is-invalid @enderror">
+                    <input  type="email" name="email" id="email" required data-aos="fade-right" data-aos-delay="200" placeholder="email" @error('email') is-invalid @enderror>
                     @error('email')
                        <span class="invalid-feedback">{{ $message }}</span>
                     @enderror
@@ -84,7 +67,7 @@
 
                 <form action="{{ route('viaura.Login-Signup') }}" method="post">
                     @csrf
-                    <input type="email" name="email"  placeholder="email" required @error('email') is-invalid @enderror">
+                    <input type="email" name="email"  placeholder="email" @error('email') is-invalid @enderror>
                     @error('email')
                        <span class="invalid-feedback">{{ $message }}</span>
                     @enderror

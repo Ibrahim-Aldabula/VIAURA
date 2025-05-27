@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 class ViauraController extends Controller
 {
@@ -34,13 +37,14 @@ class ViauraController extends Controller
                 'password'=> ['required','min:8']
                 // 'password'=> ['required','min:8','confirmed'];'email'=> ['required','email','ends_with:@gmail.com'
 
-                    ]);
-                    //  dd($request->all());
+                 ]);
+                     dd($request->all());
+                }
 
 
 
-         return view("site1.viaura");
-    }
+
+
 
       public function contact(){
         return view("site1.Contact");
