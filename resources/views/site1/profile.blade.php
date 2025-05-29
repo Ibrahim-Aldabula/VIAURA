@@ -68,9 +68,12 @@
                     <div class="col-lg-5">
                         <div class="edit-profilePic d-flex justify-content-center align-items-center flex-column p-5 ">
                             <button class="close border-0 "><i class="fa-solid fa-xmark f-24"></i></button>
-                            <img src="{{ asset('Front/images/person.jpeg') }}" alt="current image" class="w-50 mb-5">
-                            <button class="btn btn-success w-50 mb-2">Upload New Photo</button>
-                            <button class="btn btn-outline-success w-50 mb-2">Take a Photo</button>
+
+                                <img src="{{ asset('Front/images/person.jpeg') }}" alt="current image" class="w-50 mb-5">
+
+                               {{-- <input type="file" name="image" <button class="btn btn-success w-50 mb-2">Upload New Photo</button>> --}}
+                               <button class="btn btn-success w-50 mb-2">Upload New Photo</button>
+                                <button class="btn btn-outline-success w-50 mb-2">Take a Photo</button>
                         </div>
                     </div>
                 </div>

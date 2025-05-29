@@ -12,6 +12,7 @@ Route::get('/', function () {
           Route::get('/', 'viaura')->name('viaura');
 
           Route::get('/edit-profile', 'EditProfile')->name('edit-profile');
+          Route::put('/edit-profile', 'EditProfile_data');
 
           Route::get('/education', 'education')->name('education');
 
@@ -25,5 +26,7 @@ Route::get('/', function () {
           Route::get('/profileSetup', 'ProfileSetup')->name('profileSetup');
 
           Route::get('/contact', 'contact')->name('contact');
+
+          Route::get('/footer', 'footer')->name('footer');
 
       });

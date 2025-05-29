@@ -17,11 +17,16 @@ class ViauraController extends Controller
         return view("site1.Edit-profile");
     }
 
+       public function EditProfile_data(Request $request){
+        dd($request->all());
+        return view("site1.profile");
+    }
+
     public function education(){
         return view("site1.education");
     }
 
-     public function LoginSignup(){
+    public function LoginSignup(){
         return view("site1.Login-Signup");
     }
 
@@ -49,5 +54,10 @@ class ViauraController extends Controller
       public function contact(){
         return view("site1.Contact");
     }
+
+        public function footer(){
+        return view("site1.footer");
+    }
+
 
 }

@@ -7,7 +7,7 @@
     <title>Edit Profile</title>
     <link rel="stylesheet" href="{{ asset('Front/CSS/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('Front/CSS/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" /> --}}
     <link rel="website icon" href="{{ asset('Front/images/LOGO.svg') }}">
     <link rel="stylesheet" href="{{ asset('Front/CSS/edit-profile.css') }}">
 
@@ -33,48 +33,54 @@
     <main>
         <section class="form pb-50">
             <div class="container w-70">
-                <form id="formId" class="row g-5 needs-validation" >
-                    <div class="col-md-5 username" data-aos="fade-right" data-aos-duration="700" data-aos-delay="300">
+                {{-- <form id="formId" class="row g-5 needs-validation" > --}}
+              <form action="{{ route('viaura.edit-profile') }}"    method="post"
+                         class="row g-5 needs-validation">
+                    <div class="col-md-5 username" data-aos="fade-right" data-aos-duration="700"    data-aos-delay="300">
                         <label for="Username" class="form-label  ms-3 f-18">Username</label>
-                        <input type="text" class="form-control" id="username" value="Ayden Harris" name="username">
+                        <input type="text" class="form-control" id="username"  name="username" value="{{ old('Username') }}">
                     </div>
                     <div class="col-md-5 jobtitle" data-aos="fade-right" data-aos-duration="700" data-aos-delay="400">
                         <label for="jobtitle" class="form-label  ms-3 f-18">Job Title</label>
-                        <input type="text" class="form-control" id="jobtitle" value="Full Stack Developer" name="jobtitle">
+                        <input type="text" class="form-control" id="jobtitle" name="jobtitle" value="{{ old('jobtitle') }}">
                     </div>
                     <div class="col-md-8 biography" data-aos="fade-right" data-aos-duration="700" data-aos-delay="500">
                         <label for="biography" class="form-label  ms-3 f-18">Bio</label>
-                        <textarea class="form-control" id="biography" rows="5">
-Hi, I’m Aiden Harris, a Full Stack Developer with solid experience in building modern and responsive web applications. I work with technologies like React, Node.js, and MongoDB to create user-friendly frontends and powerful backends.
+                        <textarea class="form-control" id="biography" name="biography" rows="5" value="{{ old('biography') }}">
+                            {{-- Hi, I’m Aiden Harris, a Full Stack Developer with solid experience in building modern and responsive web applications. I work with technologies like React, Node.js, and MongoDB to create user-friendly frontends and powerful backends.
 
-I enjoy solving problems with clean, efficient code and always aim to deliver high-quality results that help businesses grow. I pay close attention to performance, design, and user experience in every project I build.
+                            I enjoy solving problems with clean, efficient code and always aim to deliver high-quality results that help businesses grow. I pay close attention to performance, design, and user experience in every project I build.
 
-Whether I'm working on an e-commerce site, a dashboard, or a custom web app, I’m always focused on building things that are fast, reliable, and easy to use.
+                            Whether I'm working on an e-commerce site, a dashboard, or a custom web app, I’m always focused on building things that are fast, reliable, and easy to use.
+
+                            " ayden.d.harris@gmail.com"
+
+                            Maple Ave, Toronto, ON, Canada
+                            --}}
                         </textarea>
                     </div>
                     <div class="col-md-8 email" data-aos="fade-right" data-aos-duration="700" data-aos-delay="600">
                         <label for="email" class="form-label  ms-3 f-18">Email</label>
-                        <input type="email" class="form-control" id="email" value=" ayden.d.harris@gmail.com"
-                            name="email">
+                        <input type="email" class="form-control" id="email" value="{{ old('email') }}" name="email">
                     </div>
                     <div class="col-md-8 phone" data-aos="fade-right" data-aos-duration="700" data-aos-delay="700">
                         <label for="phone" class="form-label  ms-3 f-18">Contact Number</label>
-                        <input type="tel" class="form-control" id="phone" value="+123 45678910" name="phone">
+                        <input type="tel" class="form-control" id="phone" value="{{ old('phone') }}" name="phone">
                     </div>
                     <div class="col-md-8 address" data-aos="fade-right" data-aos-duration="700" data-aos-delay="200">
                         <label for="address" class="form-label  ms-3 f-18">Address</label>
-                        <input type="text" class="form-control" id="address" value="Maple Ave, Toronto, ON, Canada" name="address">
+                        <input type="text" class="form-control" id="address" value="{{ old('address') }}" name="address">
                     </div>
                     <div class="col-md-8 links" data-aos="fade-right" data-aos-duration="700" data-aos-delay="300">
                         <label for="link" class="form-label  ms-3 f-18">Links</label> <button type="button"
                             class="btn m-2 transition-all" onclick="addLinkFields()"><i
                                 class="fa-solid fa-plus"></i></button>
-                        <div id="link-fields">
-                            <div class="link-group mb-3">
-                                <input type="text" class="form-control mb-2" name="url[]" placeholder="URL">
-                                <input type="text" class="form-control" name="link-title[]" placeholder="Title">
+                            <div id="link-fields">
+                                <div class="link-group mb-3">
+                                    <input type="text" class="form-control mb-2" name="url[]" placeholder="URL">
+                                    <input type="text" class="form-control" name="link-title[]" placeholder="Title">
+                                </div>
                             </div>
-                        </div>
                     </div>
                     <div class="col-lg-7 skills" data-aos="fade-right" data-aos-duration="700" data-aos-delay="300">
                         <label for="skillInput" class="form-label  ms-3 f-18">Skills</label>
@@ -109,7 +115,7 @@ Whether I'm working on an e-commerce site, a dashboard, or a custom web app, I�
                             <div id="upload-area" class="upload-box">
                                 <p>Click or drag project cover Image here to upload<br><span>or paste (CTRL+V)</span>
                                 </p>
-                                <input type="file" id="fileInput" accept="image/*" hidden>
+                                <input type="file" name="image" id="fileInput" accept="image/*" hidden>
                                 <img id="previewImage" src="" alt="" style="display: none;" />
                             </div>
                             <button type="button" class="btn remove-image my-3 transition-all"
@@ -145,7 +151,7 @@ Whether I'm working on an e-commerce site, a dashboard, or a custom web app, I�
         </section>
     </main>
     <script src="{{ asset('Front/JS/bootstrap.bundle.min.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> --}}
     <script src="{{ asset('Front/JS/edit-profile.js') }}"></script>
 </body>
 

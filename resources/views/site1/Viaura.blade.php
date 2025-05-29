@@ -7,7 +7,7 @@
   <title>VIAURA</title>
   <link rel="stylesheet" href="{{ asset('Front/CSS/all.min.css') }}">
   <link rel="stylesheet" href="{{ asset('Front/CSS/bootstrap.min.css') }}">
-  {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" /> --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="website icon" href="{{ asset('Front/images/LOGO.svg') }}">
   <link rel="stylesheet" href="{{ asset('Front/CSS/Viaura.css') }}">
 
@@ -16,14 +16,14 @@
 <body>
 
   <!-- Splash Screen -->
-  <div class="splash">
-    <img src="{{ asset('Front/images/light-viaura-logo.svg') }}" alt="Logo">
-  </div>
+  <!-- <div class="splash">
+    <img src="images/light-viaura-logo.svg" alt="Logo">
+  </div> -->
 
   <header>
-    <nav class="navbar navbar-expand-lg" data-aos="fade-down" data-aos-delay="1100" data-aos-duration="800">
+    <nav class="navbar navbar-expand-lg" data-aos="fade-down" data-aos-delay="100">
       <div class="container">
-        <a class="navbar-brand" data-aos="fade-right" data-aos-delay="1600" data-aos-duration="800" href="#"><img
+        <a class="navbar-brand" data-aos="fade-right" data-aos-delay="600" href="#"><img
             src="{{ asset('Front/images/Dark-viaura-logo.svg') }}" class="w-36" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,28 +31,28 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav main">
-            <li class="nav-item">
+            <li class="nav-item" data-aos="fade-down" data-aos-delay="100">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" data-aos="fade-down" data-aos-delay="200">
               <a class="nav-link" href="#about">About</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
               <a class="nav-link" href="#education">Education</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" data-aos="fade-down" data-aos-delay="400">
               <a class="nav-link" href="#jobs">Jobs</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('viaura.contact') }}">Contact</a>
+            <li class="nav-item" data-aos="fade-down" data-aos-delay="500">
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
-          <ul class="navbar-nav" data-aos="fade-left" data-aos-delay="1600" data-aos-duration="800">
-            <li class="nav-item"> <a href="{{ route('viaura.Login-Signup') }}" class="btn btn-outline-success">
+          <ul class="navbar-nav">
+            <li class="nav-item" data-aos="fade-left" data-aos-delay="200"> <a href="{{ route('viaura.Login-Signup') }}" class="btn btn-outline-success">
                 LOGIN
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" data-aos="fade-left" data-aos-delay="400">
               <a href="{{ route('viaura.Login-Signup') }}" class="btn btn-success me-3">
                 SIGNUP
               </a>
@@ -71,16 +71,16 @@
       <div class="container">
         <div class="row justify-content-center align-items-center">
           <div class="col-lg-12 text-center">
-            <h1 class="mb-20" data-aos="fade-up" data-aos-delay="1200" data-aos-duration="800">Because Every Dream <br>
+            <h1 class="mb-20" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">Because Every Dream <br>
               <div class="span">Deserves a Chance</div>
             </h1>
-            <p class="w-50 mx-auto mb-40" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="800">Lorem ipsum,
+            <p class="w-50 mx-auto mb-40" data-aos="fade-up" data-aos-delay="500" data-aos-duration="500">Lorem ipsum,
               dolor sit amet consectetur adipisicing elit. Iusto veritatis unde
               illo labore est alias
               saepe, similique voluptate soluta dolore quibusdam ipsum libero blanditiis.</p>
 
           </div>
-          <div class=" row search" data-aos="fade-up" data-aos-delay="1700" data-aos-duration="800">
+          <div class=" row search" data-aos="fade-up" data-aos-delay="700" data-aos-duration="500">
             <div class="col-lg-8 col-12 search-panel mx-auto ">
               <div class=" col-10">
                 <form action="" method="post">
@@ -99,19 +99,19 @@
 
     <!--About-->
     <section id="about" class="about  ptb-50">
-      <div class="about-content ptb-100 mx-auto" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+      <div class="about-content ptb-100 mx-auto" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">
         <div class="container mx-auto">
           <div class="row">
             <div class="col-lg-12">
-              <span data-aos="fade-down" data-aos-delay="300" data-aos-duration="800">About</span>
-              <h2 class="mb-20" data-aos="fade-right" data-aos-delay="200" data-aos-duration="800">Viaura </h2>
-              <p data-aos="fade-right" data-aos-delay="200" data-aos-duration="800">Lorem ipsum dolor, sit amet
+              <span data-aos="fade-down" data-aos-delay="300" data-aos-duration="500">About</span>
+              <h2 class="mb-20 fw-700" data-aos="fade-right" data-aos-delay="200" data-aos-duration="500">Viaura </h2>
+              <p data-aos="fade-right" data-aos-delay="200" data-aos-duration="500">Lorem ipsum dolor, sit amet
                 consectetur adipisicing elit. Velit, distinctio.</p>
             </div>
           </div>
           <div class="row align-items-center mb-5">
-            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="300" data-aos-duration="800">
-              <h3 class="mb-40">Education</h3>
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="300" data-aos-duration="500">
+              <h3 class="mb-40 fw-700">Education</h3>
               <p class="mb-40">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos esse tempore, quam,
                 adipisci doloribus
                 nobis exercitationem unde iure ut, recusandae dolor laudantium odit cum debitis quae. Aut delectus saepe
@@ -120,16 +120,16 @@
               <a href="{{ route('viaura.education') }}" class="btn btn-success mb-sm-4">Explore More <i
                   class="fa-solid fa-angle-right "></i> </a>
             </div>
-            <div class="col-lg-6 image mt-3 " data-aos="fade-left" data-aos-delay="400" data-aos-duration="800">
+            <div class="col-lg-6 image mt-3 " data-aos="fade-left" data-aos-delay="400" data-aos-duration="500">
               <img class="mx-sm-auto ms-lg-5" src="{{ asset('Front/images/Education.svg') }}" alt="education">
             </div>
           </div>
           <div class="row align-items-center mt-lg-5">
-            <div class="col-lg-6 image1 mb-3" data-aos="fade-right" data-aos-delay="300" data-aos-duration="800">
+            <div class="col-lg-6 image1 mb-3" data-aos="fade-right" data-aos-delay="300" data-aos-duration="500">
               <img class="mx-sm-auto" src="{{ asset('Front/images/jobs.svg') }}" alt="jobs">
             </div>
-            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400" data-aos-duration="800">
-              <h3 class="mb-40 mt-sm-4">Jobs</h3>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400" data-aos-duration="500">
+              <h3 class="mb-40 mt-sm-4 fw-700">Jobs</h3>
               <p class="mb-40">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos esse tempore, quam,
                 adipisci doloribus
                 nobis exercitationem unde iure ut, recusandae dolor laudantium odit cum debitis quae. Aut delectus saepe
@@ -168,7 +168,7 @@
               <div class="card-body text-center">
                 <h5 class="pt-3">back End Program</h5>
                 <p>A brief description of the first project and its key features.</p>
-                <a href="{{ route('viaura.viaura') }}" class="btn btn-success">Get Started</a>
+                <a href="{{ route('viaura.Login-Signup') }}" class="btn btn-success">Get Started</a>
               </div>
             </div>
           </div>
@@ -178,7 +178,7 @@
               <div class="card-body text-center">
                 <h5 class="pt-3">Artificial Intelligence</h5>
                 <p>A brief description of the first project and its key features.</p>
-                <a href="{{ route('viaura.viaura') }}" class="btn btn-success">Get Started</a>
+                <a href="{{ route('viaura.Login-Signup') }}" class="btn btn-success">Get Started</a>
               </div>
             </div>
           </div>
@@ -267,14 +267,68 @@
         </div>
       </div>
     </section>
+
+    <!--Contact-->
+    <section class=" contact ptb-50" id="contact">
+      <div class="content mx-auto ptb-50">
+              <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12 title text-center">
+            <h2 class="mb-3" data-aos="fade-down" data-aos-delay="100">Get in <span>touch</span></h2>
+            <p data-aos="fade-up" data-aos-delay="100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni officiis nulla!</p>
+          </div>
+          <!-- Contact Form Column -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <form id="contactForm" action="contact.php" method="POST" novalidate class="w-80 mx-auto">
+              <div class="mb-3">
+                <label for="name" class="form-label ms-3" data-aos="fade-right" data-aos-delay="200">Full Name</label>
+                <input type="text" class="form-control py-2 ps-3" id="name" name="name" required placeholder="Enter your name here" aria-describedby="nameError"  data-aos="fade-left" data-aos-delay="200"/>
+                <div id="nameError" class="error">Please enter your full name.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label ms-3" data-aos="fade-right" data-aos-delay="200">Email Address</label>
+                <input type="email" class="form-control py-2 ps-3" id="email" name="email" required
+                  placeholder="Enter your email address here" aria-describedby="emailError"  data-aos="fade-left" data-aos-delay="200"/>
+                <div id="emailError" class="error">Please enter a valid email address.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="phone" class="form-label ms-3" data-aos="fade-right" data-aos-delay="200">Phone</label>
+                <input type="tel" class="form-control py-2 ps-3" id="phone" name="phone" required pattern="^\+?\d{7,15}$"
+                  placeholder="Enter your phone number here" aria-describedby="phoneError" data-aos="fade-left" data-aos-delay="200"/>
+                <div id="phoneError" class="error">Please enter a valid phone number.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="message" class="form-label ms-3" data-aos="fade-right" data-aos-delay="200">Message</label>
+                <textarea class="form-control py-2 ps-3" id="message" name="message" rows="4" required
+                  placeholder="write what you wanna say here" aria-describedby="messageError" data-aos="fade-left" data-aos-delay="200"></textarea>
+                <div id="messageError" class="error">Please enter your message.</div>
+              </div>
+
+              <button type="submit" class="btn-outline-success ms-3 px-4 py-2 fw-600 transition-all">Send</button>
+            </form>
+          </div>
+
+          <!-- SVG Placeholder Column -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="contactSVG">
+              <img src="{{ asset('Front/images/contact.svg') }}" alt="" class="w-90 mx-auto">
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
   </main>
 
   <!--Footer-->
   <!-- Footer will only load correctly when running on a local server (e.g., Live Server or deployed site) -->
-  <footer id="footer"></footer>
+  <footer id="{{ route('viaura.footer') }}"></footer>
 
   <script src="{{ asset('Front/JS/bootstrap.bundle.min.js') }}"></script>
-  {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> --}}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="{{ asset('Front/JS/Viaura.js') }}"></script>
 </body>
 
