@@ -16,9 +16,9 @@
 <body>
 
   <!-- Splash Screen -->
- {{-- <div class="splash">
-    <img src="{{ asset('Front/images/light-viaura-logo.svg') }}" alt="Logo">
-  </div> --}}
+  <!-- <div class="splash">
+    <img src="images/light-viaura-logo.svg" alt="Logo">
+  </div> -->
 
   <header>
     <nav class="navbar navbar-expand-lg" data-aos="fade-down" data-aos-delay="100">
@@ -48,12 +48,12 @@
             </li>
           </ul>
           <ul class="navbar-nav">
-            <li class="nav-item" data-aos="fade-left" data-aos-delay="200"> <a href="{{ route('viaura.LoginSignup') }}" class="btn btn-outline-success">
+            <li class="nav-item" data-aos="fade-left" data-aos-delay="200"> <a href="{{ route('viaura.Login-Signup') }}" class="btn btn-outline-success">
                 LOGIN
               </a>
             </li>
             <li class="nav-item" data-aos="fade-left" data-aos-delay="400">
-              <a href="{{ route('viaura.LoginSignup') }}" class="btn btn-success me-3">
+              <a href="{{ route('viaura.Login-Signup') }}" class="btn btn-success me-3">
                 SIGNUP
               </a>
             </li>
@@ -158,9 +158,9 @@
             <div class="education-card card">
               <img src="{{ asset('Front/images/educational-program.jpg') }}" alt="program 1">
               <div class="card-body text-center ">
-                <h5 class="pt-3">Frontend Program</h5>
+                <h5 class="pt-3">Front End Program</h5>
                 <p>A brief description of the first project and its key features.</p>
-                <a href="{{ route('viaura.LoginSignup') }}" class="btn btn-success">Get Started</a>
+                <a href="{{ route('viaura.Login-Signup') }}" class="btn btn-success">Get Started</a>
               </div>
             </div>
           </div>
@@ -168,9 +168,9 @@
             <div class="education-card card">
               <img src="{{ asset('Front/images/educational-program.jpg') }}" alt="program 2">
               <div class="card-body text-center">
-                <h5 class="pt-3">backend Program</h5>
+                <h5 class="pt-3">back End Program</h5>
                 <p>A brief description of the first project and its key features.</p>
-                <a href="{{ route('viaura.LoginSignup') }}" class="btn btn-success">Get Started</a>
+                <a href="{{ route('viaura.Login-Signup') }}" class="btn btn-success">Get Started</a>
               </div>
             </div>
           </div>
@@ -180,7 +180,7 @@
               <div class="card-body text-center">
                 <h5 class="pt-3">Artificial Intelligence</h5>
                 <p>A brief description of the first project and its key features.</p>
-                <a href="{{ route('viaura.LoginSignup') }}" class="btn btn-success">Get Started</a>
+                <a href="{{ route('viaura.Login-Signup') }}" class="btn btn-success">Get Started</a>
               </div>
             </div>
           </div>
@@ -209,7 +209,7 @@
           </div>
           <div class="col-lg-4">
             <div class="content transition-all" data-aos="fade-up" data-aos-delay="100">
-              <a href="{{ route('viaura.LoginSignup') }}">
+              <a href="{{ route('viaura.Login-Signup') }}">
                 <i class="fa-solid fa-laptop-code"></i>
                 Web Development
               </a>
@@ -217,7 +217,7 @@
           </div>
           <div class="col-lg-4">
             <div class="content transition-all" data-aos="fade-up" data-aos-delay="200">
-              <a href="{{ route('viaura.LoginSignup') }}">
+              <a href="{{ route('viaura.Login-Signup') }}">
                 <i class="fa-solid fa-palette"></i>
                 Design
               </a>
@@ -225,7 +225,7 @@
           </div>
           <div class="col-lg-4">
             <div class="content transition-all" data-aos="fade-up" data-aos-delay="300">
-              <a href="{{ route('viaura.LoginSignup') }}">
+              <a href="{{ route('viaura.Login-Signup') }}">
                 <i class="fa-solid fa-gears"></i>
                 AI & Machine Learning
               </a>
@@ -233,7 +233,7 @@
           </div>
           <div class="col-lg-4">
             <div class="content transition-all" data-aos="fade-up" data-aos-delay="400">
-              <a href="{{ route('viaura.LoginSignup') }}">
+              <a href="{{ route('viaura.Login-Signup') }}">
                 <i class="fa-solid fa-rectangle-ad"></i>
                 Marketing
               </a>
@@ -241,7 +241,7 @@
           </div>
           <div class="col-lg-4">
             <div class="content transition-all" data-aos="fade-up" data-aos-delay="500">
-              <a href="{{ route('viaura.LoginSignup') }}">
+              <a href="{{ route('viaura.Login-Signup') }}">
                 <i class="fa-solid fa-wand-magic-sparkles"></i>
                 Editing
               </a>
@@ -249,7 +249,7 @@
           </div>
           <div class="col-lg-4">
             <div class="content transition-all" data-aos="fade-up" data-aos-delay="600">
-              <a href="{{ route('viaura.LoginSignup') }}">
+              <a href="{{ route('viaura.Login-Signup') }}">
                 <i class="fa-solid fa-language"></i>
                 Translation
               </a>
@@ -327,7 +327,45 @@
 
   <!--Footer-->
   <!-- Footer will only load correctly when running on a local server (e.g., Live Server or deployed site) -->
-  <footer id="{{ route('viaura.footer') }}"></footer>
+  {{-- <footer id="{{ route('viaura.footer') }}"></footer> --}}
+
+      <footer>
+        <div id="contact" class="container ptb-100">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-12col-12 mx-auto">
+              <div class="single-footer">
+                <h2 class="mb-40">Viaura</h2>
+                <p class="mb-40">Viaura connects learning with real-world opportunities
+                  One platform for skills, growth, and freelance success</p>
+                <a href="" class="btn btn-outline-success" data-aos="fade-up" data-aos-delay="200">Explore More <i
+                    class="fa-solid fa-angle-right "></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 links mt-sm-4 ">
+              <div class="single-footer w-50 mx-auto">
+                <h4>Useful Links</h4>
+                <ul>
+                  <li><a href="{{ route('viaura.viaura') }}"><i class="fa-solid fa-angle-right "></i> Home</a></li>
+                  <li><a href="{{ route('viaura.viaura') }}"><i class="fa-solid fa-angle-right "></i> About viaura</a></li>
+                  <li><a href="{{ route('viaura.education') }}"><i class="fa-solid fa-angle-right "></i> Educational Programs</a></li>
+                  <li><a href="{{ route('viaura.Login-Signup') }}"><i class="fa-solid fa-angle-right "></i> Job Categories </a></li>
+                  <li><a href="{{ route('viaura.Login-Signup') }}"><i class="fa-solid fa-angle-right "></i> Explore Opportunities </a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 socials">
+              <a href=""><i class="fab fa-facebook-f"></i></a>
+              <a href=""><i class="fab fa-linkedin-in"></i></a>
+              <a href=""><i class="fab fa-github"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+              <a href=""><i class="fab fa-x-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="copy-right-area text-center ">
+          <p>Viaura &copy; 2025 All rights reserved.</p>
+        </div>
+      </footer>
 
   <script src="{{ asset('Front/JS/bootstrap.bundle.min.js') }}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>

@@ -12,21 +12,32 @@ Route::get('/', function () {
           Route::get('/', 'viaura')->name('viaura');
 
           Route::get('/edit-profile', 'EditProfile')->name('edit-profile');
-          Route::put('/edit-profile', 'EditProfile_data');
+          Route::put('/edit-profile', 'EditProfile_data')->name('EditProfile_data');
 
           Route::get('/education', 'education')->name('education');
 
-          Route::get('/Login-Signup', 'LoginSignup')->name('Login-Signup');
-          Route::post('/Login-Signup', 'LoginSignup_data');
+          Route::get('/LoginSignup', 'LoginSignup')->name('LoginSignup');
+          Route::post('/LoginSignup', 'LoginSignup_data')->name('LoginSignup_data');
+        //   Route::post('/Login', 'Login_data')->name('Login_data');
+          Route::post('/Signup', 'Signup_data')->name('Signup_data');
+
 
           Route::get('/profile', 'profile')->name('profile');
 
-          Route::get('/resetPassword', 'ResetPassword')->name('resetPassword');
+          Route::get('/resetPassword', 'resetPassword')->name('resetPassword');
+          Route::post('/resetPassword', 'resetPassword_data')->name('resetPassword_data');
 
-          Route::get('/profileSetup', 'ProfileSetup')->name('profileSetup');
+          Route::get('/profileSetup', 'ProfileSetup')->name('ProfileSetup');
+          Route::post('/profileSetup', 'ProfileSetup_data')->name('ProfileSetup_data');
 
           Route::get('/contact', 'contact')->name('contact');
 
           Route::get('/footer', 'footer')->name('footer');
 
+          Route::get('/sendcode', 'sendcode')->name('sendcode');
+          Route::post('/sendcode', 'sendcode_data')->name('sendcode_data');
+
       });
+
+
+      Route::post('/data' , [ViauraController::class, 'data'])->name('data');

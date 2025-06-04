@@ -26,26 +26,41 @@ class ViauraController extends Controller
         return view("site1.education");
     }
 
-    public function LoginSignup(){
-        return view("site1.Login-Signup");
-    }
 
      public function profile(){
         return view("site1.profile");
     }
 
+    public function LoginSignup(){
+        return view("site1.Login-Signup");
+    }
 
-       public function LoginSignup_data(Request $request){
+
+
+
+        function LoginSignup_data(Request $request){
 
             $request->validate([
-                'email'=> ['required','email'],
-                'password'=> ['required','min:8']
-                // 'password'=> ['required','min:8','confirmed'];'email'=> ['required','email','ends_with:@gmail.com'
-
+                'email_login' => 'required|email|ends_with:@gmail.com',
+                'password_login'=> 'required|min:8',
+                // 'email_signup' => 'required|email',
+                // 'password_signup' => 'required|min:8|confirmed'
                  ]);
-                     dd($request->all());
-                }
+                    dd($request->all());
+        }
 
+
+
+         function data(Request $request){
+ dd($request->all());
+            $request->validate([
+                // 'email_login' => 'required|email|ends_with:@gmail.com',
+                // 'password_login'=> 'required|min:8',
+                'email_signup' => 'required|email',
+                'password_signup' => 'required|min:8|confirmed'
+                 ]);
+                    dd($request->all());
+        }
 
 
 
@@ -60,4 +75,34 @@ class ViauraController extends Controller
     }
 
 
+
+        public function resetPassword(){
+        return view("site1.resetPassword");
+    }
+
+         public function resetPassword_data(Request $request){
+            // dd($request->all());
+        return view("site1.sendcode");
+    }
+
+    //     public function ProfileSetup(){
+    //     return view("site1.ProfileSetup");
+    // }
+
+    //     public function ProfileSetup_data(){
+    //     return view("site1.ProfileSetup");
+    // }
+
+          public function sendcode(){
+        return view("site1.sendcode");
+          }
+
+          public function sendcode_data(){
+          return view("site1.sendcode");
+          }
+
+
+
 }
+
+

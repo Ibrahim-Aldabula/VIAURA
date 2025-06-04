@@ -7,7 +7,7 @@
     <title>Profile</title>
     <link rel="stylesheet" href="{{ asset('Front/CSS/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('Front/CSS/bootstrap.min.css') }}">
-    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" /> --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link rel="website icon" href="{{ asset('Front/images/LOGO.svg') }}">
     <link rel="stylesheet" href="{{ asset('Front/CSS/profile.css') }}">
 
@@ -241,9 +241,9 @@
         </div>
 
     </main>
-    <footer id="footer"></footer>
+    <footer id="{{ route('viaura.footer') }}"></footer>
     <script src="{{ asset('Front/JS/bootstrap.bundle.min.js') }}"></script>
-    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="{{ asset('Front/JS/profile.js') }}"></script>
 </body>
 

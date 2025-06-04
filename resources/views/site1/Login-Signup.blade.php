@@ -18,17 +18,28 @@
         <div class="login">
             <div class="content">
                 <h1 data-aos="fade-down" data-aos-delay="100">Log In</h1>
-                <form action="{{ route('viaura.Login-Signup') }}" method="post">
+
+                @if ($errors->any())
+                  <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                  </div>
+
+                @endif
+                <form action="{{ route('viaura.LoginSignup_data') }}" method="POST">
                     @csrf
 
-                    <input  type="email" name="email" id="email" required data-aos="fade-right" data-aos-delay="200" placeholder="email" @error('email') is-invalid @enderror>
-                    @error('email')
+                    <input  type="email" name="email_login" id="email" data-aos="fade-right" data-aos-delay="200" placeholder="email" @error('email_login') is-invalid @enderror>
+                    @error('email_login')
                        <span class="invalid-feedback">{{ $message }}</span>
                     @enderror
 
 
-                    <input type="password" name="password" id="password" placeholder="password" required data-aos="fade-right" data-aos-delay="300" @error('password') is-invalid @enderror">
-                     @error('pasword')
+                    <input type="password" name="password_login" id="password" placeholder="password"  data-aos="fade-right" data-aos-delay="300" @error('password_login') is-invalid @enderror">
+                     @error('password_login')
                         <span class="invalid-feedback">{{ $message }}</span>
                      @enderror
 
@@ -42,6 +53,7 @@
 
                     {{-- <button>Log In</button> --}}
                     <button type="submit" data-aos="fade-up" data-aos-delay="400">Log In</button>
+
                 </form>
             </div>
         </div>
@@ -65,19 +77,39 @@
             <div class="content">
                 <h1>Sign Up</h1>
 
-                <form action="{{ route('viaura.Login-Signup') }}" method="post">
+                @if ($errors->any())
+                  <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                          <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                  </div>
+
+                @endif
+
+                <form action="{{ route('data') }}" method="POST">
                     @csrf
-                    <input type="email" name="email"  placeholder="email" @error('email') is-invalid @enderror>
+
+                    <input  type="email" name="email_signup" data-aos="fade-right" data-aos-delay="200" placeholder="email" @error('email_signup') is-invalid @enderror>
+                    @error('email_signup')
+                       <span class="invalid-feedback">{{ $message }}</span>
+                    @enderror
+
+                    {{-- <input type="email" name="email"  placeholder="email" @error('email') is-invalid @enderror>
                     @error('email')
                        <span class="invalid-feedback">{{ $message }}</span>
-                    @enderror
+                    @enderror --}}
 
-                    <input type="password" name="password"  placeholder="password" required @error('password') is-invalid @enderror">
-                    @error('password')
+
+
+                    {{-- <input type="password" name="password"  placeholder="password" required @error('password') is-invalid @enderror"> --}}
+                    <input type="password" name="password_signup"  placeholder="password" @error('password_signup') class="is-invalid" @enderror>
+                    @error('password_signup')
                        <span class="invalid-feedback">{{ $message }}</span>
                     @enderror
 
-                    <input type="password" name="password_confirmation"  placeholder="confirm password" required>
+                    <input type="password" name="password_confirmation"  placeholder="confirm password">
 
                     <input type="checkbox" name="acceptTerms"  class="acceptTerms">
                     <label for="acceptTerms">I accept terms</label>
