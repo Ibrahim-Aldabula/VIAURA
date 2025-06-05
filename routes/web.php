@@ -30,7 +30,6 @@ Route::get('/', function () {
           Route::get('/profileSetup', 'ProfileSetup')->name('ProfileSetup');
           Route::post('/profileSetup', 'ProfileSetup_data')->name('ProfileSetup_data');
 
-          Route::get('/contact', 'contact')->name('contact');
 
           Route::get('/footer', 'footer')->name('footer');
 
@@ -40,4 +39,10 @@ Route::get('/', function () {
       });
 
 
+
+      Route::get('/contact' , [ViauraController::class, 'contact'])->name('contact');
+
       Route::post('/data' , [ViauraController::class, 'data'])->name('data');
+
+      Route::post('/contact_data' , [ViauraController::class, 'contact_data'])->name('contact_data');
+

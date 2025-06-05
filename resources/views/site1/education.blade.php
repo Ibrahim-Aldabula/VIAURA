@@ -392,8 +392,8 @@
                   <li><a href="{{ route('viaura.viaura') }}"><i class="fa-solid fa-angle-right "></i> Home</a></li>
                   <li><a href="{{ route('viaura.viaura') }}"><i class="fa-solid fa-angle-right "></i> About viaura</a></li>
                   <li><a href="{{ route('viaura.education') }}"><i class="fa-solid fa-angle-right "></i> Educational Programs</a></li>
-                  <li><a href="{{ route('viaura.Login-Signup') }}"><i class="fa-solid fa-angle-right "></i> Job Categories </a></li>
-                  <li><a href="{{ route('viaura.Login-Signup') }}"><i class="fa-solid fa-angle-right "></i> Explore Opportunities </a></li>
+                  <li><a href="{{ route('viaura.LoginSignup') }}"><i class="fa-solid fa-angle-right "></i> Job Categories </a></li>
+                  <li><a href="{{ route('viaura.LoginSignup') }}"><i class="fa-solid fa-angle-right "></i> Explore Opportunities </a></li>
                 </ul>
               </div>
             </div>

@@ -281,32 +281,63 @@
           </div>
           <!-- Contact Form Column -->
           <div class="col-lg-6 mb-4 mb-lg-0">
-            <form id="contactForm" action="contact.php" method="POST" novalidate class="w-80 mx-auto">
+
+            @if ($errors->any())
+                @if ($errors->any()==0)
+                    <div class="alert alert-danger">
+                        <ul>
+                            <li>
+                                {{'Data sent successfully'}}
+                            </li>
+                        </ul>
+
+                    </div>
+                @else
+                    <div class="alert alert-danger">
+                        <ul>
+                            <li>
+                                {{'Error sending data'}}
+                            </li>
+                        </ul>
+                    </div>
+                @endif
+
+            @endif
+
+            <form action="{{ route('contact_data') }}" method="POST" novalidate class="w-80 mx-auto">
+                @csrf
               <div class="mb-3">
                 <label for="name" class="form-label ms-3" data-aos="fade-right" data-aos-delay="200">Full Name</label>
-                <input type="text" class="form-control py-2 ps-3" id="name" name="name" required placeholder="Enter your name here" aria-describedby="nameError"  data-aos="fade-left" data-aos-delay="200"/>
-                <div id="nameError" class="error">Please enter your full name.</div>
+                <input type="text" class="form-control py-2 ps-3 @error('name') is-invalid @enderror" id="name" name="name"  placeholder="Enter your name here" aria-describedby="nameError"  data-aos="fade-left" data-aos-delay="200"  value="{{ old('name') }}"/>
+                @error('name')
+                     <small class="text-danger">{{ $message }}</small>
+                @enderror
               </div>
 
               <div class="mb-3">
                 <label for="email" class="form-label ms-3" data-aos="fade-right" data-aos-delay="200">Email Address</label>
-                <input type="email" class="form-control py-2 ps-3" id="email" name="email" required
-                  placeholder="Enter your email address here" aria-describedby="emailError"  data-aos="fade-left" data-aos-delay="200"/>
-                <div id="emailError" class="error">Please enter a valid email address.</div>
+                <input type="email" class="form-control py-2 ps-3 @error('email') is-invalid @enderror" id="email" name="email"  placeholder="Enter your email address here" aria-describedby="emailError"  data-aos="fade-left" data-aos-delay="200" value="{{ old('email') }}"/>
+                    @error('email')
+                        <small class="text-danger">{{ $message }}</small>
+                    @enderror
               </div>
 
               <div class="mb-3">
                 <label for="phone" class="form-label ms-3" data-aos="fade-right" data-aos-delay="200">Phone</label>
-                <input type="tel" class="form-control py-2 ps-3" id="phone" name="phone" required pattern="^\+?\d{7,15}$"
-                  placeholder="Enter your phone number here" aria-describedby="phoneError" data-aos="fade-left" data-aos-delay="200"/>
-                <div id="phoneError" class="error">Please enter a valid phone number.</div>
+                <input type="tel" class="form-control py-2 ps-3 @error('phone') is-invalid @enderror" id="phone" name="phone" placeholder="Enter your phone number here" data-aos="fade-left" data-aos-delay="200"
+                value="{{ old('phone') }}"/>
+                    @error('phone')
+                        <small class="text-danger">{{ $message }}</small>
+                    @enderror
               </div>
 
               <div class="mb-3">
                 <label for="message" class="form-label ms-3" data-aos="fade-right" data-aos-delay="200">Message</label>
-                <textarea class="form-control py-2 ps-3" id="message" name="message" rows="4" required
-                  placeholder="write what you wanna say here" aria-describedby="messageError" data-aos="fade-left" data-aos-delay="200"></textarea>
-                <div id="messageError" class="error">Please enter your message.</div>
+                <textarea class="form-control py-2 ps-3 @error('message') is-invalid @enderror" id="message"    name="message" rows="4"
+                  placeholder="write what you wanna say here" aria-describedby="messageError" data-aos="fade-left" data-aos-delay="200">{{ old('message') }}</textarea>
+                   @error('message')
+                        <small class="text-danger">{{ $message }}</small>
+                    @enderror
               </div>
 
               <button type="submit" class="btn-outline-success ms-3 px-4 py-2 fw-600 transition-all">Send</button>

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\contactMail;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class ViauraController extends Controller
@@ -65,11 +67,6 @@ class ViauraController extends Controller
 
 
 
-
-      public function contact(){
-        return view("site1.Contact");
-    }
-
         public function footer(){
         return view("site1.footer");
     }
@@ -99,6 +96,32 @@ class ViauraController extends Controller
 
           public function sendcode_data(){
           return view("site1.sendcode");
+          }
+
+
+
+        public function contact(){
+         return view("site1.Viaura");
+
+          }
+
+
+           public function contact_data(Request $request){
+            $request->validate([
+                'name' => 'required|min:3',
+                'email' => 'required|ends_with:@gmail.com',
+                'phone' =>  'required|max:15',
+                'message' => 'required|string'
+            ]);
+
+               $data = $request->except('_token');
+
+                Mail::to('Admin@gmail.com')->queue(new contactMail( $data ));
+
+                dd($data);
+
+            // dd($request->all());
+        //   return view("site1.sendcode");
           }
 
 
