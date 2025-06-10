@@ -116,7 +116,7 @@ class ViauraController extends Controller
 
                $data = $request->except('_token');
 
-                Mail::to('Admin@gmail.com')->queue(new contactMail( $data ));
+                Mail::to('Admin@gmail.com')->queue(new contactMail($data));
 
                 dd($data);
 

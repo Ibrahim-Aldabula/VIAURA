@@ -12,7 +12,7 @@ Route::get('/', function () {
           Route::get('/', 'viaura')->name('viaura');
 
           Route::get('/edit-profile', 'EditProfile')->name('edit-profile');
-          Route::put('/edit-profile', 'EditProfile_data')->name('EditProfile_data');
+          Route::post('/edit-profile', 'EditProfile_data')->name('EditProfile_data');
 
           Route::get('/education', 'education')->name('education');
 

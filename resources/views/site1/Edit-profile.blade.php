@@ -24,7 +24,7 @@
                 </li>
                 <li class="mb-4" data-aos="fade-right" data-aos-duration="500" data-aos-delay="400"><a href="{{ route('viaura.viaura') }}" class="fw-700"><i class="fa-solid fa-house me-2"></i> Home</a>
                 </li>
-                <li class="mb-4" data-aos="fade-right" data-aos-duration="500" data-aos-delay="500"><a href="{{ route('viaura.Login-Signup') }}" class="fw-700"><i
+                <li class="mb-4" data-aos="fade-right" data-aos-duration="500" data-aos-delay="500"><a href="{{ route('viaura.LoginSignup') }}" class="fw-700"><i
                             class="fa-solid fa-right-from-bracket me-2"></i> Logout</a></li>
             </ul>
         </nav>
@@ -34,10 +34,11 @@
         <section class="form pb-50">
             <div class="container w-70">
                 {{-- <form id="formId" class="row g-5 needs-validation" > --}}
-              <form action="{{ route('viaura.edit-profile') }}"    method="post"
-                         class="row g-5 needs-validation">
+              <form action="{{ route('viaura.edit-profile') }}" method="post"
+                         class="row g-5 needs-validation" enctype="multipart/form-data">
+                         @csrf
                     <div class="col-md-5 username" data-aos="fade-right" data-aos-duration="700"    data-aos-delay="300">
-                        <label for="Username" class="form-label  ms-3 f-18">Username</label>
+                        <label for="Username" class="form-label  ms-3 f-18">User name</label>
                         <input type="text" class="form-control" id="username"  name="username" value="{{ old('Username') }}">
                     </div>
                     <div class="col-md-5 jobtitle" data-aos="fade-right" data-aos-duration="700" data-aos-delay="400">
@@ -46,7 +47,7 @@
                     </div>
                     <div class="col-md-8 biography" data-aos="fade-right" data-aos-duration="700" data-aos-delay="500">
                         <label for="biography" class="form-label  ms-3 f-18">Bio</label>
-                        <textarea class="form-control" id="biography" name="biography" rows="5" value="{{ old('biography') }}">
+                        <textarea class="form-control" id="biography" name="biography" rows="5" > value="{{ old('biography') }}"
                             {{-- Hi, I’m Aiden Harris, a Full Stack Developer with solid experience in building modern and responsive web applications. I work with technologies like React, Node.js, and MongoDB to create user-friendly frontends and powerful backends.
 
                             I enjoy solving problems with clean, efficient code and always aim to deliver high-quality results that help businesses grow. I pay close attention to performance, design, and user experience in every project I build.

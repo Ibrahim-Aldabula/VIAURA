@@ -38,7 +38,6 @@
                         <li class="nav-item" data-aos="fade-down" data-aos-duration="400" data-aos-delay="500">
                             <a class="nav-link fw-bold mx-3" href="{{ route('viaura.edit-profile') }}">Edit Profile</a>
                         </li>
-
                     </ul>
                 </div>
             </div>
